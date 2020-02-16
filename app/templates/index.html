@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% if title %}
         <title> {{ title }}</title>
         {% else %}
-        <!-- <title>Smart Minute Pitche</title> -->
+        <title>Smart Minute Pitche</title>
         {% endif %}
-        <h1>{{ message }}</h1>
+        
     </head>
+    <body>
+        <h1>{{ message }}</h1>
+        <h2> Pitches </h2>
+            <ul>
+                {% for pitches in pitches %}
+                <li>{{ pitches_pitch.title }}</li>
+                {% endfor %}
+            </ul>
+
+            {% block content %}
+        <h1 style="text-align: center;">{{message}}</h1>
+        <h2 style="text-align: center;">Wanna Pitch?</h2>
+
+        <hr>
+        
+        <div class="container-fluid">
+       
+            <div class="col-sm-12">
+                <div class="panel style="style="border: 3px solid #f2f2f2; padding:20px; margin-top:10px; text-align:center; background-color: transparent;">
+                    <p>Pitch in your favorite category and allow others to read, review and vote for them.</p>
+                    
+                    <div style="text-align:center;">
+                        
+
+    
+                    </div>
+    
+                    <div class="row">
+    
+                        <hr>
+                
+                        {% if reviews %}
+                            {{macro.displayPitches(pitches)}}
+                
+                        {% else%}
+                            
+                
+                        {% endif %}
+                
+                    </div>
+                
+                </div>
+                
+            </div>
+
+        {% endblock %}
+
+    </body>
 </html>
