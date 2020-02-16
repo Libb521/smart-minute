@@ -1,4 +1,5 @@
-{% import 'macro.html' as macro %}
+{% extends 'base.html'%}
+{% import 'macros.html' as macro %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,7 +8,7 @@
         {% if title %}
         <title> {{ title }}</title>
         {% else %}
-        <title>Smart Minute Pitche</title>
+        <title>Smart Minute Pitch</title>
         {% endif %}
         
     </head>
