@@ -19,3 +19,16 @@ def get_pitches(category):
 
 
     return pitch_results
+
+def process_results(pitch_list):
+  
+    pitch_results = []
+    for pitch_item in pitch_list:
+        id = pitch_item.get('id')
+        title = pitch_item.get('original_title')
+
+        if pitch:
+            pitch_object = pitch(id,title)
+            pitch_results.append(pitch_object)
+
+    return pitch_results
