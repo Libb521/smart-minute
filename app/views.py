@@ -1,6 +1,8 @@
-from flask import Flask, render_template
+from flask import render_template,request,redirect,url_for,abort
 from app import app
-# from ..request import get_pitches
+from .request import get_pitches
+# from ..models import Review
+# from .forms import ReviewForm
 
 #views
 @app.route('/')
