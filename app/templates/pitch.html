@@ -1,1 +1,59 @@
-<h1>My Pitch {{ id }}</h1>
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Your Smart Minute </h1>
+    
+    <!-- Content block -->
+    {% block content %}
+    <div class="container">
+    
+        <!-- Poster background -->
+        <div class="row">
+            <div class="col-xs-6">
+            </div>
+    
+            <div class="col-xs-6">
+                <h3>{{ pitch.title }}</h3>
+
+                <a class="ratings" href=" {{pitch.title}} "> Write a new review</a>
+    
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="row">
+
+        <h1>Reviews</h1>
+        <hr>
+
+        {% if reviews %}
+            {{macro.displayReviews(reviews)}}
+
+        {% else%}
+            <h3 class="text-center">no reviews </h3>
+
+            <a class="btn btn-success btn-lg text-center" href="/pitch/review/new/{{pitch.id}}"> Write a new review</a>
+        {% endif %}
+
+    </div>
+    {% endblock %}
+
+    {% if reviews %}
+    {{macro.displayPitches(pitches)}}
+
+{% else%}
+    <h3 class="text-center">There are no pitches </h3>
+
+    <a class="btn btn-success btn-lg text-center" href=""> Write a new pitch</a>
+{% endif %}
+
+</body>
+</html>

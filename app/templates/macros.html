@@ -1,7 +1,18 @@
 {% macro displayPitchList(pitch_list) %}
 
     {% for pitch in pitch_list %}
-    <li>{{ pitch.title }}</li>
+        <li>{{ pitch.title}}</li>
+
+
+        <div class="col-sm-4">
+            <img src="" >
+            <li class="text-center">
+                <a href="">
+                    {{ pitch.title|truncate(10)}}</a>
+            </li>
+        </div>
+        
+
     {% endfor %}
 
-{% endmacro%}
+{% endmacro %}
