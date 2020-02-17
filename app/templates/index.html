@@ -15,7 +15,7 @@
         {{ super() }}
         <link rel="stylesheet" href="{{url_for('static',filename='css/indexcs.css')}}">
     {% endblock %}
-    
+
     </head>
     <body>
         <!-- <h1>{{ message }}</h1>
@@ -39,9 +39,8 @@
                     <p>Pitch in your favorite category and allow others to read, review and vote for them.</p>
                     
                     <div style="text-align:center;">
+                        <a class="ratings" href="/"> Pitch here </a> 
                         
-
-    
                     </div>
     
                     <div class="row">
@@ -53,7 +52,8 @@
                 
                         {% else%}
                             
-                
+                        <a class="btn btn-danger btn-sm text-center" href="/"> Pitch here </a>
+                        
                         {% endif %}
                 
                     </div>
@@ -62,6 +62,46 @@
                 
             </div>
 
+            <div class="clearfix"> 
+
+                <div class="box">
+                    <div class="panel panel-default" style=" background-color: transparent;">
+                        <div class="panel-heading" style=" background-color: transparent;"><p> <a href="/" style="font-size:20px; background-color: transparent;">
+                          LOVE PITCH </a> </p></div>
+                        <p class="panel-body">Love is such a beautiful language, let's converse</p>
+                    </div>
+                </div>
+                      
+                <div class="box">
+  
+                    <div class="panel panel-default" style=" background-color: transparent;">
+                        <div class="panel-heading" style=" background-color: transparent;"><p> <a href="/" style="font-size:20px; background-color: transparent;">
+                         MOTIVATIONAL PITCH </a> </p></div>
+                        <p class="panel-body">At times we all need some pick-me-up, Let's pick each other up today</p>
+  
+                    </div>
+                 </div>
+
+                 <div class="box">
+  
+                    <div class="panel panel-default" style=" background-color: transparent;">
+                        <div class="panel-heading" style=" background-color: transparent;"><p> <a href="/" style="font-size:20px; background-color: transparent;">
+                         BUSINESS PITCH </a> </p></div>
+                        <p class="panel-body">I need your smart ideas to better my business, Let's work</p>
+  
+                    </div>
+                 </div>
+
+                 <div class="box">
+  
+                    <div class="panel panel-default" style=" background-color: transparent;">
+                        <div class="panel-heading" style=" background-color: transparent;"><p> <a href="/" style="font-size:20px; background-color: transparent;">
+                         MEDICAL PITCH </a> </p></div>
+                        <p class="panel-body">A healthy life is a necessity, Let's live healthy</p>
+  
+                    </div>
+                 </div>
+  
         {% endblock %}
 
     </body>
