@@ -18,6 +18,3 @@ bootstrap = Bootstrap(app)
 from flask import Blueprint
 main = Blueprint('main',__name__)
 from . import views,error
-
-from app import views
-from app import error
