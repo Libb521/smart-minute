@@ -1,5 +1,5 @@
 import urllib.request,json
-# from .models import Pitch
+from .models import Pitch
 
 def get_pitches(category):
     '''
