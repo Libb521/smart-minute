@@ -28,7 +28,7 @@ def profile(uname):
     return render_template("profile/profile.html", user = user)
 
 @main.route('/love/pitches/')
-# @login_required
+@login_required
 def love():
     '''
     View root page function that returns the index page and its data
@@ -38,7 +38,7 @@ def love():
     return render_template('love.html', title = title )
 
 @main.route('/motivational/pitches/')
-# @login_required
+@login_required
 def motivational():
     '''
     View root page function that returns the index page and its data
@@ -48,7 +48,7 @@ def motivational():
     return render_template('motivational.html', title = title )
 
 @main.route('/business/pitches/')
-# @login_required
+@login_required
 def business():
     '''
     View root page function that returns the index page and its data
@@ -58,7 +58,7 @@ def business():
     return render_template('business.html', title = title )
    
 @main.route('/medical/pitches/')
-# @login_required
+@login_required
 def medical():
     '''
     View root page function that returns the index page and its data
@@ -110,7 +110,7 @@ def update_profile(uname):
     return render_template('profile/update.html',form =form)
 
 import urllib.request,json
-# from .models import get_pitches
+# from models import get_pitches
 
 def get_pitches(category):
     '''

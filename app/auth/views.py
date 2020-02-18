@@ -17,8 +17,8 @@ def login():
 
         flash('Unacceptable username or Password')
 
-    title = "pitch login"
-    return render_template('auth/login.html')
+    title = "smart login"
+    return render_template('auth/login.html', login_form = login_form,title=title)
 
 @auth.route("/logout")
 @login_required
