@@ -1,0 +1,9 @@
+body{
+    background-image: url('https://bit.ly/2P8cMNs');
+    background-size: cover;
+    color: rgb(240, 73, 8);
+}
+
+*{
+    box-sizing: border-box;
+}
