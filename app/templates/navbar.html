@@ -19,12 +19,12 @@
                 <li><a class="nav-item nav-link brand" href="/">Home</a></li>
                 <li><a class="nav-item nav-link brand" href="/pitch/new">Pitch</a></li>
                 <li><a class="nav-item nav-link brand" href="/">Profile</a></li>
-                <li><a class="nav-item nav-link brand" href="/">Sign out</a></li>
+                <li><a class="nav-item nav-link brand" href="{{url_for('auth.logout')}}">Sign out</a></li>
   
                 
                 <li><a class="nav-item nav-link brand" href="/">Home</a></li>
-                <li><a class="nav-item nav-link brand" href="/">Login</a></li>
-                <li><a class="nav-item nav-link brand" href="/">Register</a><li>
+                <li><a class="nav-item nav-link brand" href="{{url_for('auth.login')}}">Login</a></li>
+                <li><a class="nav-item nav-link brand" href="{{url_for('auth.register')}}">Sign-Up</a><li>
                 
                <!-- </ul> -->
           </div>
