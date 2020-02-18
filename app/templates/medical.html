@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medic</title>
+    {% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/indexcs.css')}}">
+{% endblock %}
+</head>
+<body>
+
+    {% block content %}
+    <h1 style="text-align: center;">Pitch your Medical idea here</h1>
+
+    <hr>
+
+    
+            <div class="panel panel-default" style="background-color: transparent;">
+                <div class="panel-heading"style="background-color: transparent;" ><p> <a href="{{url_for('main.business')}}" style="font-size:20px;">
+                  Medical Pitch </a> </p></div>
+                <div class="panel-body">
+                    <p>
+                        A helthy life is a necessity, Let's live healthy
+                    </p>
+                    <p>
+                        This virus is super deadly
+                    </p>
+                    <p>
+                        Mental health is the best gift ever
+                    </p> 
+                    <p>
+                        Eat healthy always
+                    </p>           
+                </div>
+
+              
+              
+              </div>
+            
+
+                  
+
+    {% endblock %}
+</body>
+</html>

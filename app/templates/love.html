@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love</title>
+    {% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/indexcs.css')}}">
+{% endblock %}
+</head>
+<body>
+
+    {% block content %}
+    <h1 style="text-align: center;">Pitch your lovely love idea here</h1>
+
+    <hr>
+
+    
+            <div class="panel panel-default" style="background-color: transparent;">
+                <div class="panel-heading"style="background-color: transparent;" ><p> <a href="{{url_for('main.business')}}" style="font-size:20px;">
+                  Love Pitch </a> </p></div>
+                <div class="panel-body">
+                    <p>
+                        Love is such a beautiful language, let's converse
+                    </p>
+                    <p>
+                        What is love?
+                    </p>
+                    <p>
+                        Love is a universal language
+                    </p> 
+                    <p>
+                        It's amazing how two strangers grow to lovers
+                    </p>           
+                </div>
+
+              
+              
+              </div>
+            
+
+                  
+
+    {% endblock %}
+</body>
+</html>

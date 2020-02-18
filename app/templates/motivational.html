@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feelings</title>
+    {% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/indexcs.css')}}">
+{% endblock %}
+</head>
+<body>
+
+    {% block content %}
+    <h1 style="text-align: center;">Pitch your motivational idea here</h1>
+
+    <hr>
+
+    
+            <div class="panel panel-default" style="background-color: transparent;">
+                <div class="panel-heading"style="background-color: transparent;" ><p> <a href="{{url_for('main.business')}}" style="font-size:20px;">
+                  motivational Pitch </a> </p></div>
+                <div class="panel-body">
+                    <p>
+                        At times we all need some pick-me-up, Let's pick each other up today
+                    </p>
+                    <p>
+                        Some people are so poor that all they have is money
+                    </p>
+                    <p>
+                        Quality is not an act, it is a habit.
+                    </p> 
+                    <p>
+                        Optimism is the faith that leads to achievement
+                    </p>           
+                </div>
+
+              
+              
+              </div>
+            
+
+                  
+
+    {% endblock %}
+</body>
+</html>

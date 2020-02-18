@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biz</title>
+    {% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/indexcs.css')}}">
+{% endblock %}
+</head>
+<body>
+
+    {% block content %}
+    <h1 style="text-align: center;">Pitch your business idea here</h1>
+
+    <hr>
+
+    
+            <div class="panel panel-default" style="background-color: transparent;">
+                <div class="panel-heading"style="background-color: transparent;" ><p> <a href="{{url_for('main.business')}}" style="font-size:20px;">
+                  Business Pitch </a> </p></div>
+                <div class="panel-body">
+                    <p>
+                        I need your smart ideas to better my business, Let's work
+                    </p>
+                    <p>
+                        What if we start a snail business? smart, right?
+                    </p>
+                    <p>
+                        For the lovers of beautiful outdoors, want to start a landcapping business
+                    </p> 
+                    <p>
+                        It's amazing to go natural at times, have your hair locked here.
+                    </p>           
+                </div>
+
+              
+              
+              </div>
+            
+
+                  
+
+    {% endblock %}
+</body>
+</html>
