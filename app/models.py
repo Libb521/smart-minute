@@ -13,10 +13,13 @@ class User(UserMixin,db.Model):
    id = db.Column(db.Integer,primary_key = True)
    username = db.Column(db.String(255))
    email = db.Column(db.String(255),unique =True,index = True)
+   role_id = db.Column(db.Integer)
    password_hash = db.Column(db.String(255))
    bio = db.Column(db.String(255))
    profile_pic_path = db.Column(db.String())
    pass_secure = db.Column(db.String(255))
+
+   pitches = db.relationship('Pitch',backref = 'user',lazy = "dynamic")
 
    @property
    def password(self):
@@ -33,13 +36,33 @@ class User(UserMixin,db.Model):
    def __repr__(self):
       return f'User {self.name}'
 
-class Pitch:
+class Pitch(db.Model):
+    __tablename__ = 'pitches'
 
-    Pitch = []
+    id = db.Column(db.Integer,primary_key = True)
+    title = db.Column(db.String())
+    body = db.Column(db.String())
+    category = db.Column(db.String())
+    
+    writer = db.Column(db.Integer,db.ForeignKey("users.id"))
 
-    def __init__(self,pitch_id,title,review):
-        self.pitch_id = pitch_id
-        self.title = title
+    def save_pitch(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_pitch(cls,id):
+        pitches = Pitch.query.filter_by(id=id).all()
+        return pitches
+
+    @classmethod
+    def get_all_pitches(cls):
+        pitches = Pitch.query.order_by('-id').all()
+        return pitches
+
+
+    def __repr__(self):
+        return f'Pitch {self.pitch_title}'
 
 class Review:
 
@@ -68,6 +91,7 @@ class Role(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     name = db.Column(db.String(255))
     users = db.relationship('User',backref = 'role',lazy="dynamic")
+    users_id = db.Column(db.Integer,db.ForeignKey('users.id'))
 
     def __repr__(self):
         return f'User {self.name}'

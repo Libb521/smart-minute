@@ -20,11 +20,11 @@
     <body>
         <!-- <h1>{{ message }}</h1>
         <h2> Pitches </h2> -->
-            <ul>
+            <!-- <ul>
                 {% for pitches in pitches %}
                 <li>{{ pitches_pitch.title }}</li>
                 {% endfor %}
-            </ul>
+            </ul> -->
 
             {% block content %}
         <h1 style="text-align: center;">{{message}}</h1>
@@ -33,6 +33,15 @@
         <hr>
         
         <div class="container-fluid">
+            <div class="container" style="font-family: Aclonica">
+
+                <!-- {% if current_user.is_authenticated%}
+                    <h1>Hello {{current_user.username}}</h1>
+                    <h3>Welcome to One Minute Pitch</h3>
+                {% else %}
+                    <h1>Hello stranger</h1>
+                {%endif%} -->
+            </div>
        
             <div class="col-sm-12">
                 <div class="panel style="style="border: 3px solid #f2f2f2; padding:20px; margin-top:10px; text-align:center; background-color: transparent;">
@@ -68,7 +77,7 @@
                     <div class="panel panel-default" style=" background-color: transparent;">
                         <div class="panel-heading" style=" background-color: transparent;"><p> <a href="{{url_for('main.love')}}" style="font-size:20px; background-color: transparent;">
                           LOVE PITCH </a> </p></div>
-                        <p class="panel-body">Love is such a beautiful language, let's converse</p>
+                        <div class="panel-body">Love is such a beautiful language, let's converse</div>
                     </div>
                 </div>
                       
@@ -77,7 +86,7 @@
                     <div class="panel panel-default" style=" background-color: transparent;">
                         <div class="panel-heading" style=" background-color: transparent;"><p> <a href="{{url_for('main.motivational')}}" style="font-size:20px; background-color: transparent;">
                          MOTIVATIONAL PITCH </a> </p></div>
-                        <p class="panel-body">At times we all need some pick-me-up, Let's pick each other up today</p>
+                        <div class="panel-body">At times we all need some pick-me-up, Let's pick each other up today</div>
   
                     </div>
                  </div>
@@ -87,7 +96,7 @@
                     <div class="panel panel-default" style=" background-color: transparent;">
                         <div class="panel-heading" style=" background-color: transparent;"><p> <a href="{{url_for('main.business')}}" style="font-size:20px; background-color: transparent;">
                          BUSINESS PITCH </a> </p></div>
-                        <p class="panel-body">I need your smart ideas to better my business, Let's work</p>
+                        <div class="panel-body">I need your smart ideas to better my business, Let's work</div>
   
                     </div>
                  </div>
@@ -97,7 +106,7 @@
                     <div class="panel panel-default" style=" background-color: transparent;">
                         <div class="panel-heading" style=" background-color: transparent;"><p> <a href="{{url_for('main.medical')}}" style="font-size:20px; background-color: transparent;">
                          MEDICAL PITCH </a> </p></div>
-                        <p class="panel-body">A healthy life is a necessity, Let's live healthy</p>
+                        <div class="panel-body">A healthy life is a necessity, Let's live healthy</div>
   
                     </div>
                  </div>
