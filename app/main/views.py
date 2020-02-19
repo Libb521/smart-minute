@@ -7,6 +7,8 @@ from ..models import User
 from .. import db
 from . import main
 
+# from . import Models
+
 #views
 @main.route('/')
 def index():
@@ -110,7 +112,7 @@ def update_profile(uname):
     return render_template('profile/update.html',form =form)
 
 import urllib.request,json
-# from models import get_pitches
+# from Models import get_pitches
 
 def get_pitches(category):
     '''
